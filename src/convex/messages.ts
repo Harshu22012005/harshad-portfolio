@@ -6,12 +6,14 @@ export const send = mutation({
     name: v.string(),
     email: v.string(),
     message: v.string(),
+    isAppointment: v.optional(v.boolean()),
   },
   handler: async (ctx, args) => {
     await ctx.db.insert("messages", {
       name: args.name,
       email: args.email,
       message: args.message,
+      isAppointment: args.isAppointment,
     });
   },
 });

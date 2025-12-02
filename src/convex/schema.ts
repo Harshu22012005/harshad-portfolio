@@ -36,6 +36,7 @@ const schema = defineSchema(
       name: v.string(),
       email: v.string(),
       message: v.string(),
+      isAppointment: v.optional(v.boolean()),
     }),
   },
   {

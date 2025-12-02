@@ -5,27 +5,43 @@ import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Mail, Phone, Linkedin, Loader2, Instagram } from "lucide-react";
+import { Mail, Phone, Linkedin, Loader2, Instagram, Calendar } from "lucide-react";
 
 export default function Contact() {
   const sendMessage = useMutation(api.messages.send);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAppointment, setIsAppointment] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
     
     try {
       await sendMessage({
-        name: formData.get("name") as string,
-        email: formData.get("email") as string,
-        message: formData.get("message") as string,
+        name,
+        email,
+        message,
+        isAppointment,
       });
+      
       toast.success("Message sent successfully!");
+      
+      // WhatsApp Redirection
+      const phoneNumber = "919067572205";
+      const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}\n*Book Appointment:* ${isAppointment ? "YES" : "No"}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      window.open(whatsappUrl, "_blank");
+
       (e.target as HTMLFormElement).reset();
+      setIsAppointment(false);
     } catch (error) {
       toast.error("Failed to send message. Please try again.");
     } finally {
@@ -120,8 +136,24 @@ export default function Contact() {
                     <Textarea id="message" name="message" required placeholder="How can I help you?" className="min-h-[150px] bg-background/50 border-primary/20" />
                   </div>
 
+                  <div className="flex items-center space-x-2 py-2">
+                    <Checkbox 
+                      id="appointment" 
+                      checked={isAppointment}
+                      onCheckedChange={(checked) => setIsAppointment(checked as boolean)}
+                      className="border-primary/50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+                    />
+                    <label
+                      htmlFor="appointment"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex items-center gap-2 cursor-pointer"
+                    >
+                      <Calendar className="h-4 w-4 text-secondary" />
+                      Book an appointment
+                    </label>
+                  </div>
+
                   <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" disabled={isLoading}>
-                    {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Send Message"}
+                    {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Send Message & Notify WhatsApp"}
                   </Button>
                 </form>
               </CardContent>
