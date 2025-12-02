@@ -12,6 +12,7 @@ import Graphics from "@/components/Graphics";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ClickSound from "@/components/ClickSound";
 
 export default function Landing() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,8 @@ export default function Landing() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
+      <ClickSound />
       <Navbar />
       <main>
         <Hero />

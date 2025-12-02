@@ -37,11 +37,12 @@ export default function Graphics() {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
             >
               <a href={link} target="_blank" rel="noopener noreferrer">
-                <Card className="aspect-square bg-card/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer group overflow-hidden">
+                <Card className="aspect-square bg-card/50 border-primary/20 hover:border-primary/50 transition-all cursor-pointer group overflow-hidden hover:shadow-[0_0_15px_rgba(0,196,255,0.2)]">
                   <CardContent className="p-0 h-full flex items-center justify-center relative">
                     <Image className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
                     <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center flex-col gap-2">

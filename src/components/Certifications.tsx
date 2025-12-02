@@ -42,17 +42,18 @@ export default function Certifications() {
           Certifications
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {certLinks.map((link, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
             >
               <a href={link} target="_blank" rel="noopener noreferrer">
-                <Card className="bg-card/50 border-primary/20 hover:border-secondary/50 transition-all cursor-pointer group h-full">
+                <Card className="bg-card/50 border-primary/20 hover:border-secondary/50 transition-all cursor-pointer group h-full hover:shadow-[0_0_15px_rgba(255,0,128,0.15)]">
                   <CardContent className="p-6 flex flex-col items-center text-center gap-4 h-full justify-center">
                     <div className="p-4 rounded-full bg-primary/10 text-primary group-hover:text-secondary transition-colors">
                       <FileText className="h-8 w-8" />

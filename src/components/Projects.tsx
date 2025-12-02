@@ -68,10 +68,11 @@ export default function Projects() {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ y: -5 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full bg-card/50 border-primary/20 hover:border-primary/50 transition-all flex flex-col">
+              <Card className="h-full bg-card/50 border-primary/20 hover:border-primary/50 transition-all flex flex-col hover:shadow-[0_0_15px_rgba(0,196,255,0.15)]">
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-xl">{project.title}</CardTitle>

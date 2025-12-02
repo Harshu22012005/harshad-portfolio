@@ -59,10 +59,11 @@ export default function Experience() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full bg-card/50 border-primary/20 hover:border-secondary/50 transition-all group">
+              <Card className="h-full bg-card/50 border-primary/20 hover:border-secondary/50 transition-all group hover:shadow-[0_0_15px_rgba(255,0,128,0.15)]">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:text-secondary transition-colors">
                     <exp.icon className="h-6 w-6" />
