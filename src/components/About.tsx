@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, GraduationCap, Languages, Heart, User } from "lucide-react";
+import { Mail, Phone, GraduationCap, Languages, Heart } from "lucide-react";
 
 export default function About() {
   return (
