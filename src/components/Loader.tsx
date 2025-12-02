@@ -12,9 +12,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           setTimeout(onComplete, 500);
           return 100;
         }
-        return prev + 2;
+        return prev + 1;
       });
-    }, 80); // 5 seconds approx (100/2 * 80ms = 4000ms + buffer)
+    }, 50); // 5 seconds approx (100/1 * 50ms = 5000ms)
 
     return () => clearInterval(timer);
   }, [onComplete]);

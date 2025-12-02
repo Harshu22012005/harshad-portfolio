@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Mail, Phone, Linkedin, Loader2 } from "lucide-react";
+import { Mail, Phone, Linkedin, Loader2, Instagram } from "lucide-react";
 
 export default function Contact() {
   const sendMessage = useMutation(api.messages.send);
@@ -61,11 +61,11 @@ export default function Contact() {
                 </p>
                 
                 <div className="space-y-4">
-                  <a href="mailto:harshadpakhale@xplorevo.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                  <a href="mailto:harshadpakhale757@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                     <div className="p-2 rounded-full bg-primary/10">
                       <Mail className="h-5 w-5" />
                     </div>
-                    <span>harshadpakhale@xplorevo.com</span>
+                    <span>harshadpakhale757@gmail.com</span>
                   </a>
                   
                   <a href="tel:+919067572205" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
@@ -75,11 +75,18 @@ export default function Contact() {
                     <span>+91 9067572205</span>
                   </a>
                   
-                  <a href="https://linkedin.com/in/harshad-pakhale-221hp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                  <a href="https://www.linkedin.com/in/harshad-pakhale-221hp/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                     <div className="p-2 rounded-full bg-primary/10">
                       <Linkedin className="h-5 w-5" />
                     </div>
                     <span>LinkedIn Profile</span>
+                  </a>
+
+                  <a href="https://www.instagram.com/harshad.h.pakhale.01?igsh=MXM1MWhtYmFxcjBhbg==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                    <div className="p-2 rounded-full bg-primary/10">
+                      <Instagram className="h-5 w-5" />
+                    </div>
+                    <span>Instagram Profile</span>
                   </a>
                 </div>
 

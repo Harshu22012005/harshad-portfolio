@@ -10,14 +10,7 @@ const projects = [
     desc: "Travel tech startup platform in development stage.",
     tags: ["Startup", "AI", "Travel Tech", "Innovation"],
     status: "In Development",
-    link: "#"
-  },
-  {
-    title: "YourTechCare",
-    desc: "Active web development solutions provider.",
-    tags: ["Web Services", "Business"],
-    status: "Active",
-    link: "#"
+    link: "https://xplorevo.com/"
   },
   {
     title: "Bharat Sewa Gateway",
@@ -27,25 +20,32 @@ const projects = [
     link: "https://bharatsewagateway.netlify.app/"
   },
   {
-    title: "AI Daily Task",
-    desc: "AI Productivity Assistant for daily management.",
-    tags: ["AI", "Productivity", "Tools"],
-    status: "Live",
-    link: "https://aidailytaske.netlify.app/"
-  },
-  {
     title: "AI Track Ration",
-    desc: "Smart Ration Transparency System.",
+    desc: "Smart Ration Transparency System with Auth flow.",
     tags: ["Social Impact", "Transparency", "Web"],
     status: "Live",
     link: "https://aitrackration.netlify.app/auth"
   },
   {
-    title: "Certificate Platform",
-    desc: "Phone/email login based certificate manager.",
-    tags: ["Management", "Auth", "Utility"],
+    title: "AI Daily Taske",
+    desc: "AI Productivity Assistant for daily management (Mobile-first).",
+    tags: ["AI", "Productivity", "Tools"],
     status: "Live",
-    link: "#"
+    link: "https://aidailytaske.netlify.app/"
+  },
+  {
+    title: "Dairy Ambassador Quiz",
+    desc: "Interactive Quiz engine.",
+    tags: ["Quiz", "Interactive", "Web"],
+    status: "Live",
+    link: "https://dairy-ambassador-quiz.lovable.app/"
+  },
+  {
+    title: "BVG APT-OC",
+    desc: "Landing page + forms for BVG APT-OC.",
+    tags: ["Landing Page", "Forms", "Web"],
+    status: "Live",
+    link: "https://bvgaptoc.gensparkspace.com/"
   }
 ];
 

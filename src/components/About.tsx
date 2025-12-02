@@ -37,11 +37,11 @@ export default function About() {
               <CardContent className="p-6 grid gap-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-primary h-5 w-5" />
-                  <span>harshadpakhale@xplorevo.com</span>
+                  <a href="mailto:harshadpakhale757@gmail.com" className="hover:text-primary transition-colors">harshadpakhale757@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="text-primary h-5 w-5" />
-                  <span>+91 9067572205</span>
+                  <a href="tel:+919067572205" className="hover:text-primary transition-colors">+91 9067572205</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="text-primary h-5 w-5" />

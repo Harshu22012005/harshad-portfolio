@@ -4,18 +4,18 @@ import { Briefcase, Award, Users, Instagram, Palette } from "lucide-react";
 
 const experiences = [
   {
+    title: "Founder & CEO",
+    org: "Xplorevo Pvt Ltd",
+    period: "2025–Present",
+    icon: Briefcase,
+    details: ["Travel tech startup under Clause 39", "Ideation & funding phase", "Visit: xplorevo.com"]
+  },
+  {
     title: "Founder & Overall Coordinator",
     org: "E-Cell MESWCOE",
     period: "2024–Present",
     icon: Users,
     details: ["Led Illuminate, IGNITEPITCH & Innovatexpo", "Managed 30+ team", "Coordinated with industry mentors"]
-  },
-  {
-    title: "Founder & CEO",
-    org: "Xplorevo",
-    period: "2025–Present",
-    icon: Briefcase,
-    details: ["Travel tech startup under Clause 39", "Ideation & funding phase"]
   },
   {
     title: "Social Media Manager",
